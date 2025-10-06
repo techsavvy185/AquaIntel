@@ -12,11 +12,15 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.aquaintel.app.ui.theme.LocalAppColors
+import dev.jeziellago.compose.markdowntext.AutoSizeConfig
+import dev.jeziellago.compose.markdowntext.MarkdownText
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -149,11 +153,12 @@ fun ChatBubble(message: ChatMessage) {
             color = if (message.isUser) Color(0xFF4285F4) else Color(0xFFE8F0FE),
             modifier = Modifier.widthIn(max = 280.dp)
         ) {
-            Text(
-                text = message.text,
+            MarkdownText(
+                markdown = message.text,
                 modifier = Modifier.padding(12.dp),
-                color = if (message.isUser) Color.White else Color.Black,
-                fontSize = 15.sp
+                style = TextStyle(
+                    color = if (message.isUser) Color.White else Color.Black,
+                ),
             )
         }
     }
