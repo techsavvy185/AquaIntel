@@ -45,10 +45,10 @@ fun GaugeIndicator(
     val foregroundArcBrush = Brush.sweepGradient(gaugeColors)
 
     Box(
-        modifier = modifier.size(150.dp),
+        modifier = modifier.size(250.dp),
         contentAlignment = Alignment.Center
     ) {
-        Canvas(modifier = Modifier.size(150.dp)) {
+        Canvas(modifier = Modifier.size(250.dp)) {
             val strokeWidth = 20f
             val radius = (size.minDimension - strokeWidth) / 2
 
@@ -84,13 +84,13 @@ fun GaugeIndicator(
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = value.toInt().toString(),
-                style = MaterialTheme.typography.headlineLarge,
+                style = MaterialTheme.typography.displayLarge,
                 color = LocalAppColors.current.onSurface
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
                 text = label,
-                style = MaterialTheme.typography.bodySmall,
+                style = MaterialTheme.typography.bodyLarge,
                 color = LocalAppColors.current.editText
             )
         }

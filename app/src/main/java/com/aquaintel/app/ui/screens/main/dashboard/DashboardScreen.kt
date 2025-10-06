@@ -163,29 +163,25 @@ private fun DashboardContent(
 
         // Soil Quality Gauge
         item {
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                colors = CardDefaults.cardColors(
-                    containerColor = LocalAppColors.current.cardBackground
-                )
+
+            Column(
+                modifier = Modifier.padding(16.dp)
+                    .fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Column(
-                    modifier = Modifier.padding(16.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Text(
-                        text = "Soil Quality Index",
-                        style = MaterialTheme.typography.titleMedium,
-                        color = LocalAppColors.current.editText
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                    GaugeIndicator(
-                        value = uiState.soilQualityIndex.toFloat(),
-                        maxValue = 10f,
-                        label = "Out of 10"
-                    )
-                }
+                Text(
+                    text = "Soil Quality Index",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = LocalAppColors.current.editText
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                GaugeIndicator(
+                    value = uiState.soilQualityIndex.toFloat(),
+                    maxValue = 10f,
+                    label = "Out of 10",
+                )
             }
+
         }
 
         // Recent Water Level Trend
