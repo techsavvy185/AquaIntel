@@ -1,6 +1,7 @@
 package com.aquaintel.app.ui.screens.main.map
 
 import android.content.res.Configuration
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,9 +28,12 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.aquaintel.app.R
 import com.aquaintel.app.data.models.AquiferStress
 import com.aquaintel.app.data.models.DWLRStation
 import com.aquaintel.app.data.models.StationStatus
@@ -133,22 +137,28 @@ private fun MapContent(
                 modifier = Modifier.fillMaxSize(),
                 contentAlignment = Alignment.Center
             ) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(
-                        text = "🗺️",
-                        style = MaterialTheme.typography.displayLarge
-                    )
-                    Text(
-                        text = "Interactive Map View",
-                        style = MaterialTheme.typography.titleMedium,
-                        color = LocalAppColors.current.editText
-                    )
-                    Text(
-                        text = "${uiState.filteredStations.size} stations found",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = LocalAppColors.current.editText
-                    )
-                }
+//                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+//                    Text(
+//                        text = "🗺️",
+//                        style = MaterialTheme.typography.displayLarge
+//                    )
+//                    Text(
+//                        text = "Interactive Map View",
+//                        style = MaterialTheme.typography.titleMedium,
+//                        color = LocalAppColors.current.editText
+//                    )
+//                    Text(
+//                        text = "${uiState.filteredStations.size} stations found",
+//                        style = MaterialTheme.typography.bodyMedium,
+//                        color = LocalAppColors.current.editText
+//                    )
+//                }
+                Image(
+                    painter = painterResource(id = R.drawable.mapdummy),
+                    contentDescription = "Map View",
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = ContentScale.Crop
+                )
             }
         }
 
