@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.aquaintel.app"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.aquaintel.app"
@@ -122,6 +122,7 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation("com.github.jeziellago:compose-markdown:0.5.7")
 }
 
 kapt {
