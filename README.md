@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="app/src/main/res/drawable/aquaintel_logo.png" alt="AquaIntel Logo" width="150"/>
+
 # 🌊 AquaIntel
 
 ### Real-time Groundwater Resource Evaluation using DWLR Data
@@ -14,8 +16,6 @@
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin-purple.svg)](https://kotlinlang.org)
 
 [Features](#-key-features) • [Architecture](#-architecture--tech-stack) • [Installation](#-installation) • [Screenshots](#-screenshots) • [Impact](#-impact)
-
-<img src="app/src/main/res/drawable/aquaintel_logo.xml" alt="AquaIntel Logo" width="200"/>
 
 ---
 
